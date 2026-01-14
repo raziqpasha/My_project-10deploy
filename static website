@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+        .form-box {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+        }
+        input, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+    <h3>Student Form</h3>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="text" id="course" placeholder="Course">
+
+    <button onclick="submitForm()">Submit</button>
+
+    <p id="output"></p>
+</div>
+
+<script>
+    function submitForm() {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let course = document.getElementById("course").value;
+
+        document.getElementById("output").innerText =
+            "Name: " + name + ", Age: " + age + ", Course: " + course;
+    }
+</script>
+
+</body>
+</html>
